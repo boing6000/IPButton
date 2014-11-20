@@ -91,7 +91,7 @@ class AdminController
 		$field = new \Ip\Form\Field\Text(
 			array(
 				'name' => 'buttonText',
-				'label' => __('Text', 'Ip-admin', false),
+				'label' => __('Text', 'Button'),
 				'value' => empty($widgetData['buttonText']) ? null : $widgetData['buttonText']
 			));
 		$form->addfield($field);
@@ -99,23 +99,23 @@ class AdminController
 		$field = new \Ip\Form\Field\Text(
 			array(
 				'name' => 'url',
-				'label' => __('URL', 'Ip-admin', false),
+				'label' => __('URL', 'Button'),
 				'value' => empty($widgetData['url']) ? null : $widgetData['url']
 			));
 		$form->addfield($field);
 
 		$values = array(
-			array('button', __('Button', 'Ip-admin', false)),
-			array('bigbutton', __('Big Button', 'Ip-admin', false)),
-			array('bigbutton2', __('Big Button 2', 'Ip-admin', false)),
-			array('facebook', __('Facebook Button', 'Ip-admin', false)),
-			array('link', __('Link', 'Ip-admin', false)),
+			array('button', __('Button', 'Button')),
+			array('bigbutton', __('Big Button', 'Button')),
+			array('bigbutton2', __('Big Button 2', 'Button')),
+			array('facebook', __('Facebook Button', 'Button')),
+			array('link', __('Link', 'Button')),
 		);
 
 		$field = new \Ip\Form\Field\Select(
 			array(
 				'name' => 'type',
-				'label' => __('Type', 'Ip-admin', false),
+				'label' => __('Type', 'Button'),
 				'values' => $values,
 				'value' => empty($widgetData['type']) ? null : $widgetData['type']
 			));
@@ -125,7 +125,7 @@ class AdminController
 		$field = new \Ip\Form\Field\Text(
 			array(
 				'name' => 'id',
-				'label' => __('ID (optional)', 'Ip-admin', false),
+				'label' => __('ID (optional)', 'Button', false),
 				'value' => empty($widgetData['id']) ? null : $widgetData['id']
 			));
 		$form->addfield($field);
@@ -133,7 +133,7 @@ class AdminController
 		$field = new \Ip\Form\Field\Text(
 			array(
 				'name' => 'customClass',
-				'label' => __('CSS classes (optional)', 'Ip-admin', false),
+				'label' => __('CSS classes (optional)', 'Button', false),
 				'value' => empty($widgetData['customClass']) ? null : $widgetData['customClass']
 			));
 		$form->addfield($field);
