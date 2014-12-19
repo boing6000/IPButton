@@ -91,8 +91,8 @@ class AdminController
 		$field = new \Ip\Form\Field\Text(
 			array(
 				'name' => 'buttonText',
-				'label' => __('Text', 'Button'),
-				'value' => empty($widgetData['buttonText']) ? null : $widgetData['buttonText']
+				'label' => __('Button text', 'Button'),
+				'value' => empty($widgetData['buttonText']) ? __('Read more', 'Button') : $widgetData['buttonText']
 			));
 		$form->addfield($field);
 
@@ -102,6 +102,7 @@ class AdminController
 				'label' => __('URL', 'Button'),
 				'value' => empty($widgetData['url']) ? null : $widgetData['url']
 			));
+		$field->addValidator('Required');
 		$form->addfield($field);
 
 		$values = array(
